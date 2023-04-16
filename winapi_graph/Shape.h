@@ -2,10 +2,11 @@
 
 #define WIN32_LEAN_AND_MEAN
 #define UNICODE
+
 #include <windows.h>
 #include <stdint.h>
 
-#include "../api/Canvas.h"
+#include "simple_graph_api/Shape.h"
 
 namespace wingraph {
 

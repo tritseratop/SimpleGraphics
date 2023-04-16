@@ -2,15 +2,16 @@
 
 project ("SimpleGraphics")
 
-add_subdirectory(api)
+add_subdirectory(simple_graph_api)
 add_subdirectory(winapi_graph)
+add_subdirectory(template_impl)
 
-add_executable (SimpleGraphics WIN32 "SimpleGraphics.cpp")
+add_executable (SimpleGraphics WIN32 "test.cpp")
 
-set(targets SimpleGraphics SimpleGraphicsWinapi SimpleGraphicsApi)
+set(targets SimpleGraphics WinapiGraph SimpleGraphApi TemplateImpl)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET ${targets} PROPERTY CXX_STANDARD 17)
 endif()
 
-target_link_libraries(SimpleGraphics PRIVATE SimpleGraphicsWinapi)
+target_link_libraries(SimpleGraphics PRIVATE WinapiGraph)

@@ -6,10 +6,6 @@
 #include "Shape.h"
 #include "Canvas.h"
 
-#include <windows.h>
-#include <stdint.h>
-
-#include "../api/Canvas.h"
 
 namespace wingraph {
 

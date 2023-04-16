@@ -5,7 +5,7 @@
 #include <windows.h>
 #include <stdint.h>
 
-#include "../api/Canvas.h"
+#include "simple_graph_api/Canvas.h"
 
 namespace wingraph {
 

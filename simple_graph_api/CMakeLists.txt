@@ -8,4 +8,4 @@ set(SOURCE_DIR
 
 aux_source_directory(${SOURCE_DIR} GRAPH_SOURCES)
 
-add_library(SimpleGraphicsApi ${GRAPH_SOURCES})
+add_library(SimpleGraphApi ${GRAPH_SOURCES})
