@@ -10,10 +10,11 @@ int WINAPI wWinMain(HINSTANCE Instance, HINSTANCE PrevInstance, PWSTR CmdLine, i
 	wingraph::MainWindow main(std::move(params));
 	main.create();
 
-	wingraph::WinShapeFactory factory(main.getBitmap());
-	auto rec = factory.createRectangle({ 100, 100 }, 64, 64, 0xff00ff);
-	auto circle = factory.createCircle({ 200, 200 }, 16, 0xff00ff);
-	auto circle2 = factory.createCircle({ 250, 250 }, 16, 0xff00ff);
+	std::shared_ptr<graph::ShapeFactory> factory
+		= std::make_shared<wingraph::WinShapeFactory>(main.getBitmap());
+	auto rec = factory->createRectangle({ 100, 100 }, 64, 64, 0xff00ff);
+	auto circle = factory->createCircle({ 200, 200 }, 16, 0xff00ff);
+	auto circle2 = factory->createCircle({ 250, 250 }, 16, 0xff00ff);
 	main.addShape(std::move(rec));
 	main.addShape(std::move(circle));
 	main.addShape(std::move(circle2));
